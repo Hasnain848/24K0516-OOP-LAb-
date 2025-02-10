@@ -28,16 +28,16 @@ public:
              << "\n Availability: " << (available ? "Available" : "Not Available") << endl;
     }
 
-    // Getters
+   
     int getId() { return id; }
     bool isAvailable() { return available; }
 
-    // Setters
+  
     void setAvailable(bool available) { this->available = available; }
 };
 
 class Library {
-    Book** books; // Array of pointers to books
+    Book** books; 
     int capacity;
     int numBooks;
 
@@ -45,14 +45,14 @@ public:
     Library(int capacity) {
         this->capacity = capacity;
         this->numBooks = 0;
-        this->books = new Book*[capacity]; // Array of book pointers
+        this->books = new Book*[capacity]; 
     }
 
     ~Library() {
         for (int i = 0; i < numBooks; i++) {
-            delete books[i]; // Free each allocated book
+            delete books[i];
         }
-        delete[] books; // Free the array itself
+        delete[] books; 
     }
 
     void addBook(int id, string title, string author) {
