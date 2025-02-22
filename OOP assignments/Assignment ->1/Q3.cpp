@@ -57,23 +57,23 @@ public:
 };
 
 int main() {
-    string name, type;
+  string name, type;
     char choice;
     int id, age, number;
-    cout<<"=============================="<<endl;
-    cout<<"| MY Name:M Hasnain Siddiqui |"<<endl;
-    cout<<"| Roll num: 24K-0516         |"<<endl;
-    cout<<"=============================="<<endl;
-    
+    cout << "==============================" << endl;
+    cout << "| MY Name: M Hasnain Siddiqui |" << endl;
+    cout << "| Roll num: 24K-0516         |" << endl;
+    cout << "==============================" << endl;
     cout << "--------- Register Page --------------" << endl;
     cout << "Enter Name: ";
-    cin >> name;
+    getline(cin, name);
     cout << "ID: ";
     cin >> id;
     cout << "Enter Age: ";
     cin >> age;
+    cin.ignore(); 
     cout << "Enter License type (Learner/Intermediate/Full): ";
-    cin >> type;
+    getline(cin, type);
     cout << "Contact number: ";
     cin >> number;
 
@@ -81,43 +81,49 @@ int main() {
 
     cout << "Do you want to edit your details? (y/n): ";
     cin >> choice;
-    if (choice == 'y' || choice == 'Y') {
+    if (choice == 'y' || choice == 'Y')
+    {
         user.updateDetails();
     }
 
-    int vehicleCount = 3;  
-    Vehicle* vehicles[3];   
+    int vehicleCount = 3;
+    Vehicle *vehicles[3];
 
-    
     vehicles[0] = new Vehicle("Toyota Corolla", 2022, 1600, 50.0, "Learner");
     vehicles[1] = new Vehicle("Honda Civic", 2023, 1800, 60.0, "Intermediate");
     vehicles[2] = new Vehicle("BMW X5", 2023, 3000, 120.0, "Full");
 
-    
     cout << "\nAvailable Vehicles: " << endl;
-    for (int i = 0; i < vehicleCount; i++) {
+    for (int i = 0; i < vehicleCount; i++)
+    {
         vehicles[i]->displayVehicle();
     }
 
-    
     cout << "\nEnter the number of the vehicle you want to rent (1-3): ";
     int choiceVehicle;
     cin >> choiceVehicle;
 
-    if (choiceVehicle >= 1 && choiceVehicle <= vehicleCount) {
-        Vehicle* selectedVehicle = vehicles[choiceVehicle - 1];
+    if (choiceVehicle >= 1 && choiceVehicle <= vehicleCount)
+    {
+        Vehicle *selectedVehicle = vehicles[choiceVehicle - 1];
 
-        if (selectedVehicle->isEligible(user.getLicenseType())) {
+        if (selectedVehicle->isEligible(user.getLicenseType()))
+        {
             cout << "Rental Successful! You have rented the vehicle." << endl;
-        } else {
+        }
+        else
+        {
             cout << "Sorry, you are not eligible to rent this vehicle." << endl;
         }
-    } else {
+    }
+    else
+    {
         cout << "Invalid selection." << endl;
     }
 
-
-    for (int i = 0; i < vehicleCount; i++) {
+    
+    for (int i = 0; i < vehicleCount; i++)
+    {
         delete vehicles[i];
     }
 
