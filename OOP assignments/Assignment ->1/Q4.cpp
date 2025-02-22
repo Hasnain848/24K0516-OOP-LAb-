@@ -291,6 +291,10 @@ int main()
     string stop;
     do
     {
+        cout<<"=============================="<<endl;
+        cout<<"| MY Name:M Hasnain Siddiqui |"<<endl;
+        cout<<"| Roll num: 24K-0516         |"<<endl;
+        cout<<"=============================="<<endl;
         cout << "\n FAST TRANSPORT SYSTEM \n";
         cout << "1 Register Student\n";
         cout << "2 Pay Fees\n";
