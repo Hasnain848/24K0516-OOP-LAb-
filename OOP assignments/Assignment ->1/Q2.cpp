@@ -106,7 +106,10 @@ class Game{
 };
 int main(){
     //srand(time(0));  
-
+    cout<<"=============================="<<endl;
+    cout<<"| MY Name:M Hasnain Siddiqui |"<<endl;
+    cout<<"| Roll num: 24K-0516         |"<<endl;
+    cout<<"=============================="<<endl;
     Game game("Team A", "Robot Alpha", "Team B", "Robot Beta");
     game.startgame();
 
