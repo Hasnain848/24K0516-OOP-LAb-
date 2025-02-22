@@ -60,7 +60,10 @@ int main() {
     string name, type;
     char choice;
     int id, age, number;
-
+    cout<<"=============================="<<endl;
+    cout<<"| MY Name:M Hasnain Siddiqui |"<<endl;
+    cout<<"| Roll num: 24K-0516         |"<<endl;
+    cout<<"=============================="<<endl;
     
     cout << "--------- Register Page --------------" << endl;
     cout << "Enter Name: ";
