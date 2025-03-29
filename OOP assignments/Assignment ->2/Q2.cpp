@@ -235,28 +235,24 @@ void Visit(Visitor* visitors, int visitorCount, Hauntedhouse& hauntedHouse) {
 }
 
 int main(){
-
+    cout << "===============================" << endl;
+    cout << "| MY Name: M Hasnain Siddiqui |" << endl;
+    cout << "| Roll num: 24K-0516          |" << endl;
+    cout << "===============================" << endl;
     Hauntedhouse house1("Shadowy Manor",5);
     Hauntedhouse house2("Creaking Mansion",5);
     Hauntedhouse house3("Whispering Woods Cabin",5);
-
     house1.addghost(new Poltergeists("Mike",5));
     house1.addghost(new Banshees("Lisa", 6));
     house1.addghost(new ShadowGhosts("Tom", 7));
     house1.addghost(new ShadowPoltergeist("Sarah",8 ));
-    
-   
     house2.addghost(new Poltergeists("Jake",2 ));
     house2.addghost(new Banshees("Emma", 3));
     house2.addghost(new ShadowGhosts("Alex",4 ));
-    
-   
     house3.addghost(new ShadowGhosts("Chris",5 ));
     house3.addghost(new Poltergeists("Mia", 8));
     house3.addghost(new ShadowPoltergeist("Ryan",1 ));
-
     house1.addghost(*house1.getghost(0)+*house1.getghost(1));
-
     Visitor visitors[5] = {
         Visitor("Hasnain", 2),      // Cowardly
         Visitor("Obaid", 3),     // Cowardly
@@ -264,12 +260,8 @@ int main(){
         Visitor("Jawad", 7),   // Average
         Visitor("Yousha", 9)    // Fearless
     };
-   
 Visit(visitors, 5, house1);
 Visit(visitors, 5, house2);
 Visit(visitors, 5, house3);
-    
-
-
-    
+      
 }
