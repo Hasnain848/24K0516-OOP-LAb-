@@ -1,3 +1,0 @@
-Id	Name			GPA
-101	Hasnain			4
-102	Ibrahim			4
